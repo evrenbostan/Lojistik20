@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC4A698E-8582-4BC6-A03C-1B8A609D905D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Lojistik20</RootNamespace>
+    <AssemblyName>Lojistik20</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver">
+      <HintPath>C:\Users\evren\source\repos\WebBrowserDeneme\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaGiris.designer.cs">
+      <DependentUpon>AnaGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dinamik.cs" />
+    <Compile Include="IsEmirleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsEmirleri.designer.cs">
+      <DependentUpon>IsEmirleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsEmriDetayi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IsEmriDetayi.designer.cs">
+      <DependentUpon>IsEmriDetayi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lojistik.cs" />
+    <Compile Include="LojistikDesign.cs" />
+    <Compile Include="Musteriler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Musteriler.designer.cs">
+      <DependentUpon>Musteriler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecimParametre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SecimParametre.designer.cs">
+      <DependentUpon>SecimParametre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="xNesneler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="xNesneler.designer.cs">
+      <DependentUpon>xNesneler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YolGuzergahBilgisiGetir.cs" />
+    <Compile Include="YolKart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YolKart.designer.cs">
+      <DependentUpon>YolKart.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnaGiris.resx">
+      <DependentUpon>AnaGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsEmirleri.resx">
+      <DependentUpon>IsEmirleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IsEmriDetayi.resx">
+      <DependentUpon>IsEmriDetayi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Musteriler.resx">
+      <DependentUpon>Musteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SecimParametre.resx">
+      <DependentUpon>SecimParametre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xNesneler.resx">
+      <DependentUpon>xNesneler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YolKart.resx">
+      <DependentUpon>YolKart.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash-register32icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash-register-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dts_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dura-Truck32-blue-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dura-Truck-blue-24icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dura-Truck-blue-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forklift2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forklift-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forklift-icon24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kamyonet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-icons-closeup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maps-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Place-selection-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trafik_ikaz_kirmizi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trafik_ikaz_sari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trafik_ikaz_yesil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transport-Driver-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Truck-road-beautiful-scenery-1280x640.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Road-Skyline.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-key %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-documents-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gelir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-map-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maps-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngfuel.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeMap64x64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeView2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeMap193x70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\googleMapicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yandexMapicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MicrosoftMapicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System-Map-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
